@@ -6,7 +6,7 @@
 
 #include "InputDevice.h"
 
-namespace IO
+namespace ArduinoIO
 {
 	class DigitalInput : public InputDevice<bool>
 	{

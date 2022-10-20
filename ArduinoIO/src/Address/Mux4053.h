@@ -2,7 +2,7 @@
 
 #include "BasicAddress.h"
 
-namespace IO
+namespace ArduinoIO
 {
 	namespace Address
 	{

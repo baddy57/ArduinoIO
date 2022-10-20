@@ -1,6 +1,6 @@
 #include "PWMOutput.h"
 
-void IO::PwmOutput::Write(int)
+void ArduinoIO::PwmOutput::Write(int)
 {
 	//todo
 }

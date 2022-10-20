@@ -2,7 +2,7 @@
 
 #include "OutputDevice.h"
 
-namespace IO
+namespace ArduinoIO
 {
 	class DigitalOutput : public OutputDevice<bool>
 	{

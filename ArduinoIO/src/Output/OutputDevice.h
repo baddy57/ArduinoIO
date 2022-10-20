@@ -1,6 +1,6 @@
 #pragma once
 
-namespace IO
+namespace ArduinoIO
 {
 	class OutputDeviceBase
 	{

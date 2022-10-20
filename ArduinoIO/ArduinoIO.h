@@ -7,11 +7,11 @@
 
 #pragma once
 
-#include "Input/AnalogInput.h"
-#include "Input/DigitalInput.h"
-#include "Output/DigitalOutput.h"
+#include "src/Address.h"
+#include "src/Input.h"
+#include "src/Output.h"
 
-namespace IO
+namespace ArduinoIO
 {
 	typedef AnalogInput Fader;
 	typedef AnalogInput Potentiometer;

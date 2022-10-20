@@ -3,7 +3,7 @@
 #include "InputDevice.h"
 
 #define DIV1023 0.0009775
-namespace IO
+namespace ArduinoIO
 {
 	enum ScaleType
 	{

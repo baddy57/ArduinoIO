@@ -1,6 +1,6 @@
 #include "DigitalInput.h"
 
-using namespace IO;
+using namespace ArduinoIO;
 
 //ctor
 DigitalInput::DigitalInput(int address, void callback(bool)) : InputDevice(_address, callback)

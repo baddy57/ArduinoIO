@@ -4,7 +4,7 @@
 #include "Mux4053.h"
 #include "Mux4051.h"
 
-namespace IO
+namespace ArduinoIO
 {
 	namespace Address
 	{

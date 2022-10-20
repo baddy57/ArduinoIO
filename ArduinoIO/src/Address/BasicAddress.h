@@ -1,7 +1,7 @@
 #pragma once
 #pragma once
 
-namespace IO
+namespace ArduinoIO
 {
 	namespace Address
 	{

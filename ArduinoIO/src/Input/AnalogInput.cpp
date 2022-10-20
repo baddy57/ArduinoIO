@@ -1,7 +1,7 @@
 #include "AnalogInput.h"
 
 #include <math.h>
-using namespace IO;
+using namespace ArduinoIO;
 extern const float POT_DEADZONE;
 
 extern const int POT_READS;

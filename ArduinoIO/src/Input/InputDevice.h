@@ -3,9 +3,9 @@
 #include "Arduino.h"
 #include "Address/Address.h"
 
-using namespace IO::Address;
+using namespace ArduinoIO::Address;
 
-namespace IO
+namespace ArduinoIO
 {
 	class InputDeviceBase
 	{

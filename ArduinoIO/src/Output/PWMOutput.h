@@ -1,7 +1,7 @@
 #pragma once
 #include "OutputDevice.h"
 
-namespace IO
+namespace ArduinoIO
 {
 	class PwmOutput : public OutputDevice<int>
 	{
