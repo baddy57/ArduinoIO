@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{5bd26aa8-e0fb-4a50-b31f-4112d7da76b3}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)readme.txt" />
+    <Text Include="$(MSBuildThisFileDirectory)library.properties" />
+    <Text Include="$(MSBuildThisFileDirectory)src\ArduinoIO.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- <ClInclude Include="$(MSBuildThisFileDirectory)ArduinoIO.h" /> -->
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Address\Address.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Address\BasicAddress.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Address\Mux4051.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Address\Mux4053.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Address\MuxedAddress.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Input\AnalogInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Input\DigitalInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Input\InputDevice.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Output\DigitalOutput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Output\OutputDevice.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Output\PWMOutput.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Input\AnalogInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Input\DigitalInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Output\PWMOutput.cpp" />
+  </ItemGroup>
+</Project>
