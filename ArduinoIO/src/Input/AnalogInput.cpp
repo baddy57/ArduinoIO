@@ -6,7 +6,7 @@ extern const float POT_DEADZONE;
 
 extern const int POT_READS;
 
-AnalogInput::AnalogInput(int _address, void callback(int)) : InputDevice(_address, callback)
+AnalogInput::AnalogInput(BasicAddress* _address, void callback(int)) : InputDevice(_address, callback)
 {
 }
 

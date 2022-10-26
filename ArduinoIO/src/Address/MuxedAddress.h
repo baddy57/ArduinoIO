@@ -1,18 +1,18 @@
 #pragma once
 
-#include "BasicAddress.h"
-#include "Mux4053.h"
-#include "Mux4051.h"
+#include "../Address.h"
+#include "../Multiplexer.h"
 
 namespace ArduinoIO
 {
 	namespace Address
 	{
-		class MuxedAddress : public BasicAddress, Mux4051
+		class MuxedAddress : public AddressBase
 		{
-			public:MuxedAddress(Mux4051* mux, bool a, bool b, bool c);
 			public:MuxedAddress(Mux4051* mux, byte muxPort);
-			public:virtual void PrepareForReading();//chiama base. prepare
+			public:virtual void PrepareForReading();//chiama mux.set
+			protected: Mux4051* _mux;
+			protected: byte _port;
 		};
 	}
 }

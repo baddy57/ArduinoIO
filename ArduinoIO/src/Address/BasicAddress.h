@@ -1,15 +1,17 @@
 #pragma once
-#pragma once
+
+#include "../Address.h"
 
 namespace ArduinoIO
 {
 	namespace Address
 	{
-		class BasicAddress
+		typedef byte Pin;
+		class BasicAddress : AddressBase
 		{
-			public:BasicAddress(int pin);
+			public:BasicAddress(Pin pin);
 			public:virtual void PrepareForReading();
-			protected: int pin;
+			protected: Pin _pin;
 		};
 	}
 }

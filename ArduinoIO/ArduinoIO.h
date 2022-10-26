@@ -8,6 +8,7 @@
 #pragma once
 
 #include "src/Address.h"
+#include "src/Multiplexer.h"
 #include "src/Input.h"
 #include "src/Output.h"
 
