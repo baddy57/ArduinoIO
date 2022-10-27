@@ -10,13 +10,13 @@ namespace ArduinoIO
 	class InputDeviceBase
 	{
 		public: virtual void read() = 0;
-		public: BasicAddress* _address;
+		public: AddressBase* _address;
 	};
 
 	template <class T>
 	class InputDevice : public InputDeviceBase
 	{
-		public: InputDevice(BasicAddress* address, void callback(T))
+		public: InputDevice(DirectPinAddress* address, void callback(T))
 		{
 			handleValueChanged = callback;
 			_address = address;

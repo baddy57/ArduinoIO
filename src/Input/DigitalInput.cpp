@@ -3,7 +3,7 @@
 using namespace ArduinoIO;
 
 //ctor
-DigitalInput::DigitalInput(BasicAddress* address, void callback(bool)) : InputDevice(_address, callback)
+DigitalInput::DigitalInput(AddressBase* address, void callback(bool)) : InputDevice(_address, callback)
 {
 	value = false;
 }

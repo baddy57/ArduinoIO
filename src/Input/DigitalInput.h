@@ -10,7 +10,7 @@ namespace ArduinoIO
 {
 	class DigitalInput : public InputDevice<bool>
 	{
-		public: DigitalInput(BasicAddress* _address, void callback(bool));
+		public: DigitalInput(AddressBase* _address, void callback(bool));
 		protected: bool doubleTapDetected = false;
 
 		public: void read();

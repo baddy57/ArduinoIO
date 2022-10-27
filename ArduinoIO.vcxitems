@@ -23,7 +23,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)ArduinoIO.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Address.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Address\AddressBase.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)src\Address\BasicAddress.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Address\DirectPinAddress.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Address\MuxedAddress.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Input.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Input\AnalogInput.h" />
@@ -39,7 +39,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Output\PWMOutput.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)src\Address\BasicAddress.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Address\DirectPinAddress.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Address\MuxedAddress.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\ArduinoIO.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Input\AnalogInput.cpp" />
@@ -48,5 +48,8 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Multiplexers\Mux4053.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Output\DigitalOutput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Output\PWMOutput.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory).gitignore" />
   </ItemGroup>
 </Project>

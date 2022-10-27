@@ -35,7 +35,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Address\MuxedAddress.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)src\Address\BasicAddress.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Address\DirectPinAddress.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -92,11 +92,14 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Address\MuxedAddress.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)src\Address\BasicAddress.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Address\DirectPinAddress.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Address\AddressBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory).gitignore" />
   </ItemGroup>
 </Project>

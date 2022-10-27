@@ -1,12 +1,12 @@
 #include "AnalogInput.h"
-
 #include <math.h>
+
 using namespace ArduinoIO;
 extern const float POT_DEADZONE;
 
 extern const int POT_READS;
 
-AnalogInput::AnalogInput(BasicAddress* _address, void callback(int)) : InputDevice(_address, callback)
+AnalogInput::AnalogInput(AddressBase* _address, void callback(int)) : InputDevice(_address, callback)
 {
 }
 

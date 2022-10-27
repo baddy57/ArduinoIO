@@ -12,7 +12,7 @@ namespace ArduinoIO
 
 	class AnalogInput : public InputDevice<int>
 	{
-		public: AnalogInput(BasicAddress* _address, void callback(int));
+		public: AnalogInput(AddressBase* _address, void callback(int));
 
 		/*inherited
 		ControlAddress _address

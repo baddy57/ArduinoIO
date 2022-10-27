@@ -3,6 +3,8 @@
 #include "../Address.h"
 #include "../Multiplexer.h"
 
+using namespace ArduinoIO::Multiplexer;
+
 namespace ArduinoIO
 {
 	namespace Address
