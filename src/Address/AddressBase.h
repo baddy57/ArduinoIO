@@ -1,10 +1,9 @@
 #pragma once
 #include <Arduino.h>
 
-typedef byte Pin;
-
 namespace ArduinoIO
 {
+	typedef int Pin;
 	namespace Address
 	{
 		class AddressBase
