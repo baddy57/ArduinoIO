@@ -6,7 +6,7 @@ namespace ArduinoIO
 {
 	namespace Address
 	{
-		class DirectPinAddress : AddressBase
+		class DirectPinAddress : public AddressBase
 		{
 			public:DirectPinAddress(Pin pin);
 			public:virtual void PrepareForReading();

@@ -41,7 +41,6 @@
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Address\DirectPinAddress.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Address\MuxedAddress.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)src\ArduinoIO.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Input\AnalogInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Input\DigitalInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Multiplexers\Mux4051.cpp" />

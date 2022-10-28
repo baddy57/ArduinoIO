@@ -3,7 +3,7 @@
 using namespace ArduinoIO::Address;
 using namespace ArduinoIO::Multiplexers;
 
-MuxedAddress::MuxedAddress(MultiplexerBase* mux, byte muxPort) : AddressBase()
+MuxedAddress::MuxedAddress(MultiplexerBase* mux, int muxPort) : AddressBase()
 {
 	_mux = mux;
 	_port = muxPort;

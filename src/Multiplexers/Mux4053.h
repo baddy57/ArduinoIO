@@ -8,7 +8,7 @@ namespace ArduinoIO
 {
 	namespace Multiplexers
 	{
-		class Mux4053
+		class Mux4053 : public MultiplexerBase
 		{
 			public: Mux4053(AddressBase* address, Pin pinA, Pin pinBC);
 
