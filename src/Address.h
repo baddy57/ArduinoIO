@@ -1,4 +1,5 @@
 #pragma once
 
-#include "Address/BasicAddress.h"
+#include "Address/AddressBase.h"
+#include "Address/DirectPinAddress.h"
 #include "Address/MuxedAddress.h"

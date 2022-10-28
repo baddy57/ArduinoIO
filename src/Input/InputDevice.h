@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Arduino.h"
+#include <Arduino.h>
 #include "../Address.h"
 
 using namespace ArduinoIO::Address;
@@ -16,7 +16,7 @@ namespace ArduinoIO
 	template <class T>
 	class InputDevice : public InputDeviceBase
 	{
-		public: InputDevice(DirectPinAddress* address, void callback(T))
+		public: InputDevice(AddressBase* address, void callback(T))
 		{
 			handleValueChanged = callback;
 			_address = address;

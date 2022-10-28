@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../Address.h"
-#include "../Multiplexer.h"
+#include "AddressBase.h"
+#include "../Multiplexers/MultiplexerBase.h"
 
-using namespace ArduinoIO::Multiplexer;
+using namespace ArduinoIO::Multiplexers;
 
 namespace ArduinoIO
 {
@@ -11,9 +11,9 @@ namespace ArduinoIO
 	{
 		class MuxedAddress : public AddressBase
 		{
-			public:MuxedAddress(Mux4051* mux, byte muxPort);
+			public:MuxedAddress(MultiplexerBase* mux, byte muxPort);
 			public:virtual void PrepareForReading();//chiama mux.set
-			protected: Mux4051* _mux;
+			protected: MultiplexerBase* _mux;
 			protected: byte _port;
 		};
 	}

@@ -7,10 +7,10 @@
 
 #pragma once
 
-#include "src/Address.h"
-#include "src/Multiplexer.h"
-#include "src/Input.h"
-#include "src/Output.h"
+#include "Address.h"
+#include "Multiplexer.h"
+#include "Input.h"
+#include "Output.h"
 
 namespace ArduinoIO
 {

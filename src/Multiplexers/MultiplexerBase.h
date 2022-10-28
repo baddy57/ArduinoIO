@@ -1,10 +1,10 @@
 #pragma once
 
-namespace Arduino
+namespace ArduinoIO
 {
-	namespace Multiplexer
+	namespace Multiplexers
 	{
-		class Multiplexer
+		class MultiplexerBase
 		{
 			public: virtual void Prepare(byte port) = 0;
 		};

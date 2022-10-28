@@ -1,6 +1,6 @@
 #include "Mux4051.h"
 
-using namespace ArduinoIO::Multiplexer;
+using namespace ArduinoIO::Multiplexers;
 
 Mux4051::Mux4051(AddressBase* address, Pin pinA, Pin pinB, Pin pinC)
 {

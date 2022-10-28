@@ -1,10 +1,12 @@
 #pragma once
 
-#include "../Address/AddressBase.h"
+#include "../Address.h"
+
+using namespace ArduinoIO::Address;
 
 namespace ArduinoIO
 {
-	namespace Multiplexer
+	namespace Multiplexers
 	{
 		class Mux4053
 		{
