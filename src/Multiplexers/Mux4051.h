@@ -9,9 +9,8 @@ namespace ArduinoIO
 	{
 		public: Mux4051(AddressBase* address, Pin pinA, Pin pinB, Pin pinC);
 
-		public: void Prepare(byte port);//chiama address. prepare
+		public: void Prepare(byte port) override;//base.prepare e setta i selettori
 
-		protected: AddressBase* _address;
 		protected: Pin _pinA, _pinB, _pinC;
 	};
 }

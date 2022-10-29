@@ -5,6 +5,8 @@ namespace ArduinoIO
 {
 	class MultiplexerBase
 	{
-		public: virtual void Prepare(byte port) = 0;
+		protected: MultiplexerBase(AddressBase* address) : _address(address) {}
+		public: virtual void Prepare(byte port) { _address->PrepareForReading(); }
+		public: AddressBase* _address;
 	};
 }
