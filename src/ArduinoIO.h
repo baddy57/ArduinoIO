@@ -11,13 +11,3 @@
 #include "Multiplexer.h"
 #include "Input.h"
 #include "Output.h"
-
-namespace ArduinoIO
-{
-	typedef AnalogInput Fader;
-	typedef AnalogInput Potentiometer;
-	typedef DigitalInput Button;
-	typedef DigitalInput Switch;
-
-	typedef DigitalOutput Led;
-}

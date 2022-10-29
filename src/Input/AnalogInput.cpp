@@ -40,6 +40,7 @@ AnalogInput::AnalogInput(AddressBase* address, void callback(float))
 	: InputDevice(address, callback, ReadInt_AvgFilter)
 {
 	_scaleType = ScaleType::LIN;
+	_scalingRatio = 1;
 }
 
 bool AnalogInput::ValueChanged(int oldv, int newv)

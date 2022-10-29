@@ -39,7 +39,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Output\PWMOutput.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)INPUTDEVICE.CPP" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Input\InputDevice.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Address\DirectPinAddress.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Address\MuxedAddress.cpp" />
