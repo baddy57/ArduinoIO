@@ -7,6 +7,8 @@ namespace ArduinoIO
 
 	class AddressBase
 	{
-		public:virtual void PrepareForReading() = 0;
+		public: virtual void PrepareForReading() = 0;
+		public: virtual int ReadInt() = 0;
+		public: virtual bool ReadBool() = 0;
 	};
 }

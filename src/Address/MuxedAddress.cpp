@@ -12,3 +12,13 @@ void MuxedAddress::PrepareForReading()
 {
 	_mux->Prepare(_port);
 }
+
+int MuxedAddress::ReadInt()
+{
+	return _mux->ReadInt();
+}
+
+bool MuxedAddress::ReadBool()
+{
+	return _mux->ReadBool();
+}

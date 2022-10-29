@@ -10,3 +10,13 @@ DirectPinAddress::DirectPinAddress(Pin pin)
 void DirectPinAddress::PrepareForReading()
 {
 }
+
+int DirectPinAddress::ReadInt()
+{
+	return analogRead(_pin);
+}
+
+bool DirectPinAddress::ReadBool()
+{
+	return digitalRead(_pin);
+}
