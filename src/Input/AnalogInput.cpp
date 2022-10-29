@@ -6,14 +6,20 @@ extern const float POT_DEADZONE;
 
 extern const int POT_READS;
 
-static int ReadInt(AddressBase* a)
+static int ReadInt_AvgFilter(AddressBase* a, int attempts)
 {
-	return a->ReadInt();
+	int* temp = new int[attempts];
+	float sum = 0;
+	for (int i = 0; i < attempts; ++i)
+	{
+		sum += a->ReadInt();
+	}
+	return sum / attempts;
 }
 
 template <class T>
 AnalogInput<T>::AnalogInput(AddressBase* address, void callback(int))
-	: InputDevice<T>(address, callback, ReadInt)
+	: InputDevice<T>(address, callback, ReadInt_AvgFilter)
 {
 }
 
@@ -35,29 +41,12 @@ AnalogInput<T>::AnalogInput(AddressBase* address, void callback(int))
 //	switch (scale)
 //	{
 //		case LIN:
-//			k = (_max - _min) / 1023.f;
+//			_scalingRatio = (_max - _min) / 1023.f;
 //			break;
 //		case EXP:
-//			k = 1 / 1023.f;
+//			_scalingRatio = 1 / 1023.f;
 //			break;
 //	}
-//}
-//
-//void AnalogInput::Evaluate()
-//{
-	//switch (scale)
-	//{
-	//	case LIN:
-	//		return value * k + rangeMin;// / 1023.f * (max - rangeMin) + rangeMin;
-	//	case EXP:
-	//		return (exp(value * k) - 1) * rangeScope / (M_E - 1) + rangeMin;
-	//	case LOG:
-	//		return 0;
-	//	case POW:
-	//		return 0;// pow(2, (uint)value / 8) / pow(2, 127) * (max - rangeMin) + rangeMin;
-	//	default:
-	//		return -1;
-	//}
 //}
 
 //void

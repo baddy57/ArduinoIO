@@ -5,11 +5,6 @@
 #define DIV1023 0.0009775
 namespace ArduinoIO
 {
-	enum ScaleType
-	{
-		LIN, EXP, LOG, POW
-	};
-
 	template <class T>
 	class AnalogInput : public InputDevice<T>
 	{
@@ -24,7 +19,7 @@ namespace ArduinoIO
 		private: float rangeMin = 0.f;
 		private: float rangeMax = 0.f;
 		private: float range = 1.f;
-		private: float k = 1;
+		private: float _scalingRatio = 1;
 		private: int scale = LIN;
 
 		/// @brief constructor
