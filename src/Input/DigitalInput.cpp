@@ -2,11 +2,15 @@
 
 using namespace ArduinoIO;
 
+static int ReadBool(AddressBase* a)
+{
+	return a->ReadBool();
+}
 //ctor
-DigitalInput::DigitalInput(AddressBase* address, void callback(bool)) : InputDevice(address, callback)
+DigitalInput::DigitalInput(AddressBase* address, void callback(bool))
+	: InputDevice(address, callback, ReadBool)
 {
 }
-
 //bool DigitalInput::tap()
 //{
 //	if (wasUpdated() && state)

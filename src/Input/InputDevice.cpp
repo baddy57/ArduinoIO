@@ -10,7 +10,7 @@ template<class T>
 
 void InputDevice<T>::Evaluate()
 {
-	int rawValue = _address->ReadInt();
+	int rawValue = ReadFn(_address);//todo fixme sto facendo sempre analog
 	if (oldRawValue != rawValue)
 	{
 		T value = GetLogicalValue(rawValue);

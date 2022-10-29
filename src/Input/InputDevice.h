@@ -9,20 +9,22 @@ namespace ArduinoIO
 		public: virtual void Evaluate() = 0;
 		public: AddressBase* _address;
 		protected: int oldRawValue;
+		protected: int(*ReadFn)(AddressBase*);
 	};
 
 	template <class T>
 	class InputDevice : public InputDeviceBase
 	{
-		public: InputDevice(AddressBase* address, void callback(T))
+		public: InputDevice(AddressBase* address, void handleValueChanged(T), int readFn(AddressBase*))
 		{
-			handleValueChanged = callback;
+			HandleValueChanged = handleValueChanged;
+			ReadFn = readFn;
 			_address = address;
 		}
 
 		public: void Evaluate();
 
 		protected: T GetLogicalValue(int rawValue);
-		protected: void (*handleValueChanged)(T);
+		protected: void (*HandleValueChanged)(T);
 	};
 }

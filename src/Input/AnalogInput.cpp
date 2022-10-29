@@ -6,7 +6,14 @@ extern const float POT_DEADZONE;
 
 extern const int POT_READS;
 
-AnalogInput::AnalogInput(AddressBase* address, void callback(int)) : InputDevice(address, callback)
+static int ReadInt(AddressBase* a)
+{
+	return a->ReadInt();
+}
+
+template <class T>
+AnalogInput<T>::AnalogInput(AddressBase* address, void callback(int))
+	: InputDevice<T>(address, callback, ReadInt)
 {
 }
 

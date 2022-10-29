@@ -10,9 +10,10 @@ namespace ArduinoIO
 		LIN, EXP, LOG, POW
 	};
 
-	class AnalogInput : public InputDevice<int>
+	template <class T>
+	class AnalogInput : public InputDevice<T>
 	{
-		public: AnalogInput(AddressBase* address, void callback(int));
+		public: AnalogInput(AddressBase*, void(int));
 
 		/*inherited
 		ControlAddress _address
