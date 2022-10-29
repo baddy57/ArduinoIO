@@ -10,7 +10,13 @@ DigitalInput::DigitalInput(AddressBase* address, void callback(bool)) : InputDev
 
 void DigitalInput::read()
 {
-	//todo
+	value = _address->ReadBool();
+	if (oldValue != value)
+	{
+		handleValueChanged(value);
+	}
+
+	oldValue = value;
 }
 
 //bool DigitalInput::tap()

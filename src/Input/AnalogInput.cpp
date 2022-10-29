@@ -38,6 +38,14 @@ AnalogInput::AnalogInput(AddressBase* address, void callback(int)) : InputDevice
 
 void AnalogInput::read()
 {
+	value = _address->ReadInt();
+	if (oldValue != value)
+	{
+		handleValueChanged(value);
+	}
+
+	oldValue = value;
+
 	//switch (scale)
 	//{
 	//	case LIN:
