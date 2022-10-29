@@ -3,11 +3,8 @@
 
 namespace ArduinoIO
 {
-	namespace Multiplexers
+	class MultiplexerBase
 	{
-		class MultiplexerBase
-		{
-			public: virtual void Prepare(byte port) = 0;
-		};
-	}
+		public: virtual void Prepare(byte port) = 0;
+	};
 }

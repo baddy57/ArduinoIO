@@ -1,7 +1,6 @@
 #include "MuxedAddress.h"
 
-using namespace ArduinoIO::Address;
-using namespace ArduinoIO::Multiplexers;
+using namespace ArduinoIO;
 
 MuxedAddress::MuxedAddress(MultiplexerBase* mux, int muxPort) : AddressBase()
 {

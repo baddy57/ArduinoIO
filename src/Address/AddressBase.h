@@ -4,11 +4,9 @@
 namespace ArduinoIO
 {
 	typedef int Pin;
-	namespace Address
+
+	class AddressBase
 	{
-		class AddressBase
-		{
-			public:virtual void PrepareForReading() = 0;
-		};
-	}
+		public:virtual void PrepareForReading() = 0;
+	};
 }

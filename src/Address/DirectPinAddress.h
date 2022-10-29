@@ -4,13 +4,10 @@
 
 namespace ArduinoIO
 {
-	namespace Address
+	class DirectPinAddress : public AddressBase
 	{
-		class DirectPinAddress : public AddressBase
-		{
-			public:DirectPinAddress(Pin pin);
-			public:virtual void PrepareForReading();
-			protected: Pin _pin;
-		};
-	}
+		public:DirectPinAddress(Pin pin);
+		public:virtual void PrepareForReading();
+		protected: Pin _pin;
+	};
 }

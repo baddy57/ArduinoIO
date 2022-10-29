@@ -5,16 +5,13 @@
 
 namespace ArduinoIO
 {
-	namespace Multiplexers
+	class Mux4053 : public MultiplexerBase
 	{
-		class Mux4053 : public MultiplexerBase
-		{
-			public: Mux4053(Address::AddressBase* address, Pin pinA, Pin pinBC);
+		public: Mux4053(AddressBase* address, Pin pinA, Pin pinBC);
 
-			public: void Prepare(byte port);//chiama address. prepare
+		public: void Prepare(byte port);//chiama address. prepare
 
-			protected: Address::AddressBase* _address;
-			protected: Pin _pinA, _pinBC;
-		};
-	}
+		protected: AddressBase* _address;
+		protected: Pin _pinA, _pinBC;
+	};
 }

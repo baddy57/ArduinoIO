@@ -1,6 +1,6 @@
 #include "DirectPinAddress.h"
 
-using namespace ArduinoIO::Address;
+using namespace ArduinoIO;
 
 DirectPinAddress::DirectPinAddress(Pin pin)
 {
