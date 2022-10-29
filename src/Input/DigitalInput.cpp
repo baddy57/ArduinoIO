@@ -2,7 +2,7 @@
 
 using namespace ArduinoIO;
 
-static int ReadBool(AddressBase* a, int _)
+static int ReadBool(AddressBase* a)
 {
 	return a->ReadBool();
 }
@@ -43,17 +43,4 @@ DigitalInput::DigitalInput(AddressBase* address, void callback(bool))
 //{
 //	update();
 //	return state;
-//}
-//
-//void
-//DigitalInput::update()
-//{
-//	bool r = !digitalRead(_address);
-//	if (r != state)
-//	{
-//		state = r;
-//		_wasUpdated = true;
-//	}
-//	else
-//		_wasUpdated = false;
 //}

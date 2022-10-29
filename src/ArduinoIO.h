@@ -14,8 +14,8 @@
 
 namespace ArduinoIO
 {
-	typedef AnalogInput<float> Fader;
-	typedef AnalogInput<float> Potentiometer;
+	typedef AnalogInput Fader;
+	typedef AnalogInput Potentiometer;
 	typedef DigitalInput Button;
 	typedef DigitalInput Switch;
 

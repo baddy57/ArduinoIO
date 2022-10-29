@@ -5,37 +5,37 @@
 #define DIV1023 0.0009775
 namespace ArduinoIO
 {
-	template <class T>
-	class AnalogInput : public InputDevice<T>
+	enum ScaleType
 	{
-		public: AnalogInput(AddressBase*, void(int));
+		LIN,
+		POW,
+		EXP,
+		LOG
+	};
 
-		/*inherited
-		ControlAddress _address
-		bool _wasUpdated; */
-		//private: float value = -10.f;
-		private: float minRead = 0.f, maxRead = 1023.f;
-		private: float rangeScope = 0;
-		private: float rangeMin = 0.f;
-		private: float rangeMax = 0.f;
-		private: float range = 1.f;
-		private: float _scalingRatio = 1;
-		private: int scale = LIN;
+	struct Range
+	{
+		float min = 0;
+		float max = 1023;
+		float range = 1023;
+	};
 
-		/// @brief constructor
-		/// @param a _address of the module
-		/// @param id pin on the module pcb
-		/// @param pullup_res value of the pullup resistor
-		//AnalogInput(const Address& a, uint_fast8_t id, float pullup_res = 0.f) : InputDevice(a, id), value(0) { setPullUpResistor(pullup_res); };
+	class AnalogInput : public InputDevice<float>
+	{
+		public: AnalogInput(AddressBase*, void(float));
 
-		// /// @brief set the value of the pullup to fix readings
-		// /// @param value of the pullup resistor in ohm
-		//public: void setPullUpResistor(float);
+		public: void SetLogicalRange(float min, float max);
+		public: void SetPhysicalRange(int min, int max);
+		public: void SetPullUpResistor(float);
+		public: void SetScaleType(ScaleType scaleType);
+		public: void UseRangeScaling();
 
-		///// @brief set the target range of the reading
-		///// @param min value
-		///// @param max value
-		///// @param flag LIN,LOG,EXP,POW
-		//public: void setRange(float, float, int flag = LIN);
+		protected: bool ValueChanged(int, int) override;
+		protected: float GetLogicalValue(int rawValue);
+
+		protected: ScaleType _scaleType;
+		protected: Range _logicalRange;
+		protected: Range _physicalRange;
+		protected: float _scalingRatio;
 	};
 }
