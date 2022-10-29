@@ -13,8 +13,6 @@ namespace ArduinoIO
 		public: DigitalInput(AddressBase* _address, void callback(bool));
 		protected: bool doubleTapDetected = false;
 
-		public: void read();
-
 		//public: virtual bool tap();
 		//public: bool longPress();
 		//public: void update();

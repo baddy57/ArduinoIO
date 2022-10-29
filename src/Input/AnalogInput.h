@@ -41,9 +41,5 @@ namespace ArduinoIO
 		///// @param max value
 		///// @param flag LIN,LOG,EXP,POW
 		//public: void setRange(float, float, int flag = LIN);
-
-		/// @brief translates the hardware value into target value
-		/// @return a value from the range set before
-		public: void read();
 	};
 }

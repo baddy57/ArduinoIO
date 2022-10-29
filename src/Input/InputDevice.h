@@ -6,8 +6,9 @@ namespace ArduinoIO
 {
 	class InputDeviceBase
 	{
-		public: virtual void read() = 0;
+		public: virtual void Evaluate() = 0;
 		public: AddressBase* _address;
+		protected: int oldRawValue;
 	};
 
 	template <class T>
@@ -19,9 +20,9 @@ namespace ArduinoIO
 			_address = address;
 		}
 
-		protected: T oldValue;
-		protected: T value;
+		public: void Evaluate();
 
-		public: void (*handleValueChanged)(T);
+		protected: T GetLogicalValue(int rawValue);
+		protected: void (*handleValueChanged)(T);
 	};
 }

@@ -5,18 +5,6 @@ using namespace ArduinoIO;
 //ctor
 DigitalInput::DigitalInput(AddressBase* address, void callback(bool)) : InputDevice(address, callback)
 {
-	value = false;
-}
-
-void DigitalInput::read()
-{
-	value = _address->ReadBool();
-	if (oldValue != value)
-	{
-		handleValueChanged(value);
-	}
-
-	oldValue = value;
 }
 
 //bool DigitalInput::tap()

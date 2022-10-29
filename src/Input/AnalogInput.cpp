@@ -35,17 +35,9 @@ AnalogInput::AnalogInput(AddressBase* address, void callback(int)) : InputDevice
 //			break;
 //	}
 //}
-
-void AnalogInput::read()
-{
-	value = _address->ReadInt();
-	if (oldValue != value)
-	{
-		handleValueChanged(value);
-	}
-
-	oldValue = value;
-
+//
+//void AnalogInput::Evaluate()
+//{
 	//switch (scale)
 	//{
 	//	case LIN:
@@ -59,7 +51,7 @@ void AnalogInput::read()
 	//	default:
 	//		return -1;
 	//}
-}
+//}
 
 //void
 //AnalogInput::update()
