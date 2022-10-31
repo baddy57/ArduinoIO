@@ -24,7 +24,17 @@ namespace ArduinoIO
 			_address = address;
 		}
 
-		public: void Evaluate();
+		//https://stackoverflow.com/questions/10632251/undefined-reference-to-template-function
+		public: void Evaluate()
+		{
+			int rawValue = ReadFn(_address);
+			if (ValueChanged(oldRawValue, rawValue))
+			{
+				T value = GetLogicalValue(rawValue);
+				HandleValueChanged(value);
+				oldRawValue = value;
+			}
+		}
 
 		protected: virtual T GetLogicalValue(int rawValue) { return rawValue; }
 		protected: void (*HandleValueChanged)(T);
