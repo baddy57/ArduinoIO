@@ -31,7 +31,9 @@ namespace ArduinoIO
 			if (ValueChanged(oldRawValue, rawValue))
 			{
 				T value = GetLogicalValue(rawValue);
+#ifndef SIMULATION_MODE
 				HandleValueChanged(value);
+#endif
 				oldRawValue = value;
 			}
 		}
