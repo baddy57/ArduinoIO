@@ -21,6 +21,7 @@
   <ItemGroup>
     <!-- <ClInclude Include="$(MSBuildThisFileDirectory)ArduinoIO.h" /> -->
     <!-- <ClInclude Include="$(MSBuildThisFileDirectory)src\ArduinoIO.h" /> -->
+    <ClInclude Include="$(MSBuildThisFileDirectory)lib\ArduinoLoggerConfigurator\src\LoggerConfigurator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Address.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Address\AddressBase.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Address\DirectPinAddress.h" />

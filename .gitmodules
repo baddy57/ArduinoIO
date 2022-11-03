@@ -1,0 +1,3 @@
+[submodule "lib/ArduinoLoggerConfigurator"]
+	path = lib/ArduinoLoggerConfigurator
+	url = https://github.com/baddy57/ArduinoLoggerConfigurator.git
