@@ -5,7 +5,7 @@
 
 using namespace ArduinoIO;
 
-bool InputDeviceBase::ValueChanged(int oldv, int newv)
+bool InputDeviceBase::ValueChanged(int16_t oldv, int16_t newv)
 {
 	return oldv != newv;
 }

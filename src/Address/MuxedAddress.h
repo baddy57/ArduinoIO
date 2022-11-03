@@ -7,11 +7,11 @@ namespace ArduinoIO
 {
 	class MuxedAddress : public AddressBase
 	{
-		public:MuxedAddress(MultiplexerBase* mux, int muxPort);
+		public:MuxedAddress(MultiplexerBase* mux, byte muxPort);
 
-		protected: void PrepareForReading();
-		protected: int ReadInt();
-		protected: bool ReadBool();
+		public: void PrepareForReading() const;
+		public: int16_t ReadInt() const;
+		public: bool ReadBool() const;
 
 		protected: MultiplexerBase* _mux;
 		protected: byte _port;

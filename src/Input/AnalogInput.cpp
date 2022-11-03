@@ -7,18 +7,19 @@
 
 using namespace ArduinoIO;
 
-static int ReadInt_AvgFilter(AddressBase* a)
+static int16_t ReadInt_AvgFilter(AddressBase* a)
 {
 	int* temp = new int[READ_ATTEMPTS];
+	int16_t temp[READ_ATTEMPTS];
 	float sum = 0;
-	for (int i = 0; i < READ_ATTEMPTS; ++i)
+	for (int16_t i = 0; i < READ_ATTEMPTS; ++i)
 	{
 		sum += a->ReadInt();
 	}
 	return sum / READ_ATTEMPTS;
 }
 
-float AnalogInput::GetLogicalValue(int rawValue)
+float AnalogInput::GetLogicalValue(int16_t rawValue)
 {
 	switch (_scaleType)
 	{
@@ -43,7 +44,7 @@ AnalogInput::AnalogInput(AddressBase* address, void callback(float))
 	_scalingRatio = 1;
 }
 
-bool AnalogInput::ValueChanged(int oldv, int newv)
+bool AnalogInput::ValueChanged(int16_t oldv, int16_t newv)
 {
 	bool x = fdim(oldv, newv);
 	return x > POT_DEADZONE;
@@ -65,7 +66,7 @@ void AnalogInput::SetPullUpResistor(float pullup)
 	return;
 }
 
-void AnalogInput::SetPhysicalRange(int min, int max)
+void AnalogInput::SetPhysicalRange(int16_t min, int16_t max)
 {
 	_physicalRange.min = min;
 	_physicalRange.max = max;

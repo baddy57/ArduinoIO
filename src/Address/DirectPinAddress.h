@@ -8,9 +8,9 @@ namespace ArduinoIO
 	{
 		public: DirectPinAddress(Pin pin);
 
-		protected: void PrepareForReading();
-		protected: int ReadInt();
-		protected: bool ReadBool();
+		public: void PrepareForReading() const;
+		public: int16_t ReadInt() const;
+		public: bool ReadBool() const;
 
 		protected: Pin _pin;
 	};

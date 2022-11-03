@@ -7,16 +7,16 @@ DirectPinAddress::DirectPinAddress(Pin pin)
 	_pin = pin;
 }
 
-void DirectPinAddress::PrepareForReading()
+void DirectPinAddress::PrepareForReading() const
 {
 }
 
-int DirectPinAddress::ReadInt()
+int16_t DirectPinAddress::ReadInt() const
 {
 	return analogRead(_pin);
 }
 
-bool DirectPinAddress::ReadBool()
+bool DirectPinAddress::ReadBool() const
 {
 	return digitalRead(_pin);
 }

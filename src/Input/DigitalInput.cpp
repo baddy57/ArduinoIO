@@ -2,7 +2,7 @@
 
 using namespace ArduinoIO;
 
-static int ReadBool(AddressBase* a)
+int16_t ReadBool(AddressBase* a)
 {
 	return a->ReadBool();
 }

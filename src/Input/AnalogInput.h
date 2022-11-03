@@ -25,13 +25,13 @@ namespace ArduinoIO
 		public: AnalogInput(AddressBase*, void(float));
 
 		public: void SetLogicalRange(float min, float max);
-		public: void SetPhysicalRange(int min, int max);
+		public: void SetPhysicalRange(int16_t min, int16_t max);
 		public: void SetPullUpResistor(float);
 		public: void SetScaleType(ScaleType scaleType);
 		public: void UseRangeScaling();
 
-		protected: bool ValueChanged(int, int) override;
-		protected: float GetLogicalValue(int rawValue);
+		protected: bool ValueChanged(int16_t, int16_t) override;
+		protected: float GetLogicalValue(int16_t rawValue);
 
 		protected: ScaleType _scaleType;
 		protected: Range _logicalRange;

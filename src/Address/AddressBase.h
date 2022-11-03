@@ -3,12 +3,12 @@
 
 namespace ArduinoIO
 {
-	typedef int Pin;
+	typedef byte Pin;
 
 	class AddressBase
 	{
-		public: virtual void PrepareForReading() = 0;
-		public: virtual int ReadInt() = 0;
-		public: virtual bool ReadBool() = 0;
+		public: virtual void PrepareForReading() const {}
+		public: virtual int ReadInt() const { return 0; }
+		public: virtual bool ReadBool() const { return false; }
 	};
 }

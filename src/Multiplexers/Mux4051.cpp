@@ -9,7 +9,7 @@ Mux4051::Mux4051(AddressBase* address, Pin pinA, Pin pinB, Pin pinC) : Multiplex
 	_pinC = pinC;
 }
 
-void Mux4051::Prepare(byte port)
+void Mux4051::Prepare(byte port) const
 {
 	MultiplexerBase::Prepare(port);
 	digitalWrite(_pinA, port % 8);

@@ -2,24 +2,24 @@
 
 using namespace ArduinoIO;
 
-MuxedAddress::MuxedAddress(MultiplexerBase* mux, int muxPort) : AddressBase()
+MuxedAddress::MuxedAddress(MultiplexerBase* mux, byte muxPort) : AddressBase()
 {
 	_mux = mux;
 	_port = muxPort;
 }
 
-void MuxedAddress::PrepareForReading()
+void MuxedAddress::PrepareForReading()const
 {
 	_mux->Prepare(_port);
 }
 
-int MuxedAddress::ReadInt()
+int16_t MuxedAddress::ReadInt() const
 {
 	PrepareForReading();
 	return _mux->ReadInt();
 }
 
-bool MuxedAddress::ReadBool()
+bool MuxedAddress::ReadBool() const
 {
 	PrepareForReading();
 	return _mux->ReadBool();

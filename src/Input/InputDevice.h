@@ -8,16 +8,16 @@ namespace ArduinoIO
 	{
 		public: virtual void Evaluate() = 0;
 		public: AddressBase* _address;
-		protected: int (*ReadFn)(AddressBase*);
+		protected: int16_t(*ReadFn)(AddressBase*);
 
-		protected: int oldRawValue;
-		protected: virtual bool ValueChanged(int, int);
+		protected: int16_t oldRawValue = 0;
+		protected: virtual bool ValueChanged(int16_t, int16_t);
 	};
 
 	template <typename T>
 	class InputDevice : public InputDeviceBase
 	{
-		public: InputDevice(AddressBase* address, void handleValueChanged(T), int readFn(AddressBase*))
+		public: InputDevice(AddressBase* address, void handleValueChanged(T), int16_t readFn(AddressBase*))
 		{
 			HandleValueChanged = handleValueChanged;
 			ReadFn = readFn;
@@ -36,7 +36,7 @@ namespace ArduinoIO
 			}
 		}
 
-		protected: virtual T GetLogicalValue(int rawValue) { return rawValue; }
+		protected: virtual T GetLogicalValue(int16_t rawValue) { return rawValue; }
 		protected: void (*HandleValueChanged)(T);
 	};
 }

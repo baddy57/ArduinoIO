@@ -8,7 +8,7 @@ Mux4053::Mux4053(AddressBase* address, Pin pinA, Pin pinBC) : MultiplexerBase(ad
 	_pinBC = pinBC;
 }
 
-void Mux4053::Prepare(byte port)
+void Mux4053::Prepare(byte port) const
 {
 	MultiplexerBase::Prepare(port);
 	digitalWrite(_pinA, port % 4);
