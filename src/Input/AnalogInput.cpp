@@ -9,7 +9,6 @@ using namespace ArduinoIO;
 
 static int16_t ReadInt_AvgFilter(AddressBase* a)
 {
-	int* temp = new int[READ_ATTEMPTS];
 	int16_t temp[READ_ATTEMPTS];
 	float sum = 0;
 	for (int16_t i = 0; i < READ_ATTEMPTS; ++i)
