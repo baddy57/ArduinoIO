@@ -9,7 +9,6 @@ namespace ArduinoIO
 
 		public: virtual void Prepare(byte port) const
 		{
-			//Log::debug("preparing mux port " + port);
 			_address->PrepareForReading();
 		}
 		public: int ReadInt() const { return _address->ReadInt(); }
