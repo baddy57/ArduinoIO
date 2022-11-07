@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../Address.h"
-#include "LoggerConfigurator.h"
+#include <ArduinoLightLogger.h>
 
 namespace ArduinoIO
 {
@@ -31,9 +31,9 @@ namespace ArduinoIO
 			int rawValue = ReadFn(_address);
 			if (ValueChanged(oldRawValue, rawValue))
 			{
-				loginfo("value changed from %d to %d\n", oldRawValue, rawValue);
+				loginf("raw value changed from " << oldRawValue << " to " << rawValue);
 				T value = GetLogicalValue(rawValue);
-				loginfo("logical value is %d\n", value);
+				loginf("logical value is " << value);
 #ifndef SIMULATION_MODE
 				HandleValueChanged(value);
 #endif
