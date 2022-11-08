@@ -27,6 +27,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Address\MuxedAddress.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Input.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Input\AnalogInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Input\Button.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Input\DigitalInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Input\InputDevice.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Multiplexer.h" />

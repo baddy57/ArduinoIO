@@ -11,17 +11,7 @@ DigitalInput::DigitalInput(AddressBase* address, void callback(bool))
 	: InputDevice(address, callback, ReadBool)
 {
 }
-//bool DigitalInput::tap()
-//{
-//	if (wasUpdated() && state)
-//	{
-//		delay(BOUNCE_DELAY);
-//		if (!isPressed())
-//			return true;
-//	}
-//	return false;
-//}
-//
+
 //bool DigitalInput::longPress()
 //{
 //	if (wasUpdated() && state)
@@ -36,11 +26,4 @@ DigitalInput::DigitalInput(AddressBase* address, void callback(bool))
 //		return true;
 //	}
 //	return false;
-//}
-//
-//bool
-//DigitalInput::isPressed()
-//{
-//	update();
-//	return state;
 //}

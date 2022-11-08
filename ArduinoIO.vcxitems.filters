@@ -95,6 +95,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Address\AddressBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Input\Button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory).gitignore" />

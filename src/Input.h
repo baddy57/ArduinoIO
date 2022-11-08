@@ -3,13 +3,13 @@
 #include "Input/AnalogInput.h"
 #include "Input/DigitalInput.h"
 #include "Input/InputDevice.h"
+#include "Input/Button.h"
 
 namespace ArduinoIO
 {
 	typedef AnalogInput Fader;
 	typedef AnalogInput Potentiometer;
-	typedef DigitalInput Button;
-	typedef DigitalInput Switch;
+	typedef DigitalInput ToggleSwitch;
 
 	class MidiLinearPot : public AnalogInput
 	{
