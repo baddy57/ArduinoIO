@@ -2,7 +2,7 @@
 
 using namespace ArduinoIO;
 
-Mux4053::Mux4053(AddressBase* address, Pin pinA, Pin pinBC) : MultiplexerBase(address)
+Mux4053::Mux4053(AddressBase* address, pin pinA, pin pinBC) : MultiplexerBase(address)
 {
 	_pinA = pinA;
 	_pinBC = pinBC;

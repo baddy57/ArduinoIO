@@ -11,7 +11,7 @@ namespace ArduinoIO
 	class DigitalInput : public InputDevice<bool>
 	{
 		public: DigitalInput(AddressBase*, void(bool));
-
+		protected: bool GetLogicalValue(int16_t) override;
 		//protected: bool doubleTapDetected = false;
 		//public: virtual bool tap();
 		//public: bool longPress();

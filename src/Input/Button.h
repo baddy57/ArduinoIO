@@ -12,10 +12,10 @@ namespace ArduinoIO
 		return a->ReadBool();
 	}
 
-	class Button : public InputDevice<bool>
+	class Button : public DigitalInput
 	{
 		public: Button(AddressBase* address, void callback(bool))
-			: InputDevice(address, callback, ReadFn)
+			: DigitalInput(address, callback)
 		{
 			oldRawValue = false;
 		}

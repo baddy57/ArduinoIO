@@ -26,7 +26,7 @@ namespace ArduinoIO
 		}
 
 		//https://stackoverflow.com/questions/10632251/undefined-reference-to-template-function
-		public: void Evaluate()
+		public: virtual void Evaluate()
 		{
 			int rawValue = ReadFn(_address);
 			if (ValueChanged(oldRawValue, rawValue))

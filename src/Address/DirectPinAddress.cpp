@@ -2,13 +2,9 @@
 
 using namespace ArduinoIO;
 
-DirectPinAddress::DirectPinAddress(Pin pin)
+DirectPinAddress::DirectPinAddress(pin pin)
 {
 	_pin = pin;
-}
-
-void DirectPinAddress::PrepareForReading() const
-{
 }
 
 int16_t DirectPinAddress::ReadInt() const

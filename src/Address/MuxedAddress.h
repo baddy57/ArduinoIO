@@ -9,7 +9,7 @@ namespace ArduinoIO
 	{
 		public:MuxedAddress(MultiplexerBase* mux, byte muxPort);
 
-		public: void PrepareForReading() const;
+		public: void PrepareForReading() const override;
 		public: int16_t ReadInt() const;
 		public: bool ReadBool() const;
 
