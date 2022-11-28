@@ -19,4 +19,12 @@ namespace ArduinoIO
 			UseRangeScaling();
 		}
 	};
+	class MidiInvertedLinearPot : public AnalogInput
+	{
+		public: MidiInvertedLinearPot(AddressBase* address, void callback(float)) : AnalogInput(address, callback)
+		{
+			SetLogicalRange(127, 0);
+			UseRangeScaling();
+		}
+	};
 }
