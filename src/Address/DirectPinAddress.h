@@ -11,6 +11,7 @@ namespace ArduinoIO
 
 		public: int16_t ReadInt() const;
 		public: bool ReadBool() const;
+		public: virtual pin GetPin() const { return _pin; }
 
 		protected: pin _pin;
 	};

@@ -12,6 +12,7 @@ namespace ArduinoIO
 		public: void PrepareForReading() const override;
 		public: int16_t ReadInt() const;
 		public: bool ReadBool() const;
+		public: pin GetPin() const { return _mux->_address->GetPin(); }
 
 		protected: MultiplexerBase* _mux;
 		protected: byte _port;
