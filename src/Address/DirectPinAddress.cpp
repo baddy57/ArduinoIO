@@ -14,5 +14,5 @@ int16_t DirectPinAddress::ReadInt() const
 
 bool DirectPinAddress::ReadBool() const
 {
-	return digitalRead(_pin);
+	return !digitalRead(_pin);
 }

@@ -26,12 +26,16 @@ namespace ArduinoIO
 		{
 			if (!oldRawValue && ReadFn(_address))
 			{
-				HandleValueChanged(true);
-				oldRawValue = true;
 				wentTrueAt = millis();
+				loginf("click detected on " << _address->GetPin());
+#ifndef SIMULATION_MODE
+				HandleValueChanged(true);
+#endif
+				oldRawValue = true;
 			}
-			else if (oldRawValue && millis() - wentTrueAt > DEBOUNCE_ms)
+			else if (oldRawValue && millis() - wentTrueAt > DEBOUNCE_ms && !ReadFn(_address))
 			{
+				loginf("click RESET on " << _address->GetPin());
 				oldRawValue = false;
 			}
 		}

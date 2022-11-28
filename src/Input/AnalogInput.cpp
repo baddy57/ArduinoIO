@@ -13,7 +13,7 @@ static int16_t ReadInt_AvgFilter(AddressBase* a)
 	float sum = 0;
 	for (int16_t i = 0; i < READ_ATTEMPTS; ++i)
 	{
-		sum += a->ReadInt();
+		sum += a->ReadInt(); //todo fixme preparazione va fatta una volta sola
 	}
 	return sum / READ_ATTEMPTS;
 }
@@ -45,8 +45,8 @@ AnalogInput::AnalogInput(AddressBase* address, void callback(float))
 
 bool AnalogInput::ValueChanged(int16_t oldv, int16_t newv)
 {
-	bool x = fdim(oldv, newv);
-	return x > POT_DEADZONE;
+	int16_t delta = oldv > newv ? oldv - newv : newv - oldv;
+	return delta > POT_DEADZONE;
 }
 
 void AnalogInput::SetLogicalRange(float min, float max)
