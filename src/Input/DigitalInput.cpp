@@ -12,6 +12,11 @@ DigitalInput::DigitalInput(AddressBase* address, void callback(bool))
 {
 }
 
+bool ArduinoIO::DigitalInput::GetLogicalValue(int16_t value)
+{
+	return value == 0;
+}
+
 //bool DigitalInput::longPress()
 //{
 //	if (wasUpdated() && state)

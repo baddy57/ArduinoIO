@@ -37,7 +37,7 @@ namespace ArduinoIO
 #ifndef SIMULATION_MODE
 				HandleValueChanged(value);
 #endif
-				oldRawValue = value;
+				oldRawValue = rawValue;
 			}
 		}
 
